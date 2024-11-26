@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cancer Prediction</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+  </head>
+  <body class="main-body">
+    <div class="form-container">
+      <h2>Cancer Prediction Inputs</h2>
+      <form action="{% url 'result' %}" method="post">
+        {% csrf_token %}
+        <input
+          type="text"
+          name="area_mean"
+          placeholder="Area (Mean)"
+          required
+        />
+        <input
+          type="text"
+          name="concave_points_mean"
+          placeholder="Concave Points (Mean)"
+          required
+        />
+        <input
+          type="text"
+          name="concave_points_worst"
+          placeholder="Concave Points (Worst)"
+          required
+        />
+        <input
+          type="text"
+          name="concavity_worst"
+          placeholder="Concavity (Worst)"
+          required
+        />
+        <input
+          type="text"
+          name="perimeter_mean"
+          placeholder="Perimeter (Mean)"
+          required
+        />
+        <input
+          type="text"
+          name="perimeter_worst"
+          placeholder="Perimeter (Worst)"
+          required
+        />
+        <input
+          type="text"
+          name="radius_mean"
+          placeholder="Radius (Mean)"
+          required
+        />
+        <input
+          type="text"
+          name="radius_worst"
+          placeholder="Radius (Worst)"
+          required
+        />
+        <input
+          type="text"
+          name="texture_mean"
+          placeholder="Texture (Mean)"
+          required
+        />
+        <input
+          type="text"
+          name="texture_worst"
+          placeholder="Texture (Worst)"
+          required
+        />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

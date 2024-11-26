@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Breast Cancer Awareness</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+  </head>
+  <body class="index-body">
+    <header>
+      <nav>
+        <ul>
+          <li class="button"><a href="{% url 'about' %}">About us</a></li>
+          <li class="button"><a href="{% url 'stats' %}">Statistics</a></li>
+          {% if user.is_authenticated %}
+          <li class="button"><a href="{% url 'logout' %}">Logout</a></li>
+          {% else %}
+          <li class="button"><a href="{% url 'login' %}">Login</a></li>
+          <li class="button"><a href="{% url 'signup' %}">Signup</a></li>
+          {% endif %}
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="text-container">
+          <h1>Breast <span>Cancer</span></h1>
+          <p>
+            Welcome to Breast Cancer Prediction Web Application!
+            <br />
+            Signup to create your account!
+            <br />
+            Already have an account? Login to get started!
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,422 @@
+/* COMMON IN ALL PAGES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  font-size: 1.2rem;
+  gap: 30px;
+  padding: 5px;
+}
+
+.button:hover {
+  transition: all 0.25s linear;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.line {
+  margin: 30px auto;
+  height: 5px;
+  width: 70%;
+  border-radius: 3px;
+  background-color: #f2b147;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 10px;
+  padding: 1rem;
+
+  a img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+  }
+
+  a img:hover {
+    transform: scale(1.1);
+  }
+}
+
+.messages {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  color: #de0a0ae0;
+
+  .success {
+    color: #05a105dc;
+  }
+
+  .error {
+    color: #de0a0ae0;
+  }
+}
+
+/* INDEX PAGE */
+.index-body {
+  height: 100%;
+  background-image: url("./images/breast_cancer.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.text-container {
+  max-width: 600px;
+  text-align: center;
+
+  h1 {
+    font-size: 90px;
+    font-weight: bold;
+
+    span {
+      color: #00d8ff;
+    }
+  }
+
+  p {
+    margin: 20px 0;
+    line-height: 1.6;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #ffffff;
+  }
+}
+
+/* ABOUT PAGE */
+.about-body {
+  background: linear-gradient(135deg, #d91b64, #7649fe);
+}
+
+.about-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  .main-heading {
+    font-size: 90px;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 4rem;
+    margin: 2rem;
+  }
+}
+
+.developers {
+  padding-bottom: 6rem;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+
+  .dev-1,
+  .dev-2,
+  .dev-3 {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 200px;
+  }
+
+  .dev-text {
+    h1 {
+      color: #a8e6cf;
+      font-size: 2.5rem;
+    }
+
+    span {
+      color: #f2b147;
+    }
+
+    p {
+      color: #ffffff;
+      font-weight: 400;
+    }
+  }
+}
+
+/* LOGIN & SIGNUP PAGE */
+.login-body,
+.signup-body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #7f00ff, #e100ff);
+}
+
+.login-container,
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.login-box,
+.signup-box {
+  background: rgba(44, 7, 53, 0.85);
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: white;
+  width: 100%;
+  max-width: 400px;
+
+  h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #a8e6cf;
+  }
+
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 8px;
+    background: #2a003e;
+    color: #fff;
+    font-size: 16px;
+  }
+
+  form input[type="text"]:focus,
+  form input[type="email"]:focus,
+  form input[type="password"]:focus {
+    outline: none;
+    border: 2px solid #a8e6cf;
+  }
+
+  form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #40e0d0;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  form button:hover {
+    opacity: 0.85;
+  }
+}
+
+.login-links,
+.signup-links {
+  margin-top: 15px;
+
+  a {
+    color: #a8e6cf;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+.social-login {
+  margin-top: 20px;
+  color: #a8e6cf;
+  font-size: 14px;
+}
+
+/* MAIN PAGE */
+body .main-body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: linear-gradient(135deg, #7f00ff, #e100ff);
+  overflow: hidden;
+}
+
+.form-container {
+  background: rgba(44, 7, 53, 0.85);
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 100%;
+  height: 768px;
+  max-width: 700px;
+
+  h2 {
+    font-size: 28px;
+    margin-bottom: 5px;
+    color: #a8e6cf;
+  }
+
+  form input[type="text"] {
+    width: 100%;
+    padding: 11px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    background: #2a003e;
+    color: white;
+    font-size: 16px;
+  }
+
+  form input:focus {
+    outline: none;
+    border: 2px solid #a8e6cf;
+  }
+
+  form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #40e0d0;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+  }
+
+  form button:hover {
+    background: #36c0b4;
+  }
+}
+
+/* RESULT PAGE */
+.result-body {
+  background: linear-gradient(135deg, #ad77df, #420e76);
+  overflow: hidden;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+
+  h1 {
+    margin: 1.5rem;
+    padding-bottom: 2.5rem;
+    font-size: 4.3rem;
+    font-weight: 700;
+    color: #000;
+  }
+
+  h3 {
+    margin: 0.4rem;
+    padding: 1rem;
+    font-size: 3.1rem;
+    font-weight: 600;
+    color: #ffffff;
+
+    span {
+      color: #40e0d0;
+    }
+  }
+}
+
+/* STATISTICS PAGE */
+.stats-body {
+  background: linear-gradient(135deg, #ad77df, #420e76);
+
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    h2 {
+      margin: 3.5rem;
+      padding-bottom: 1rem;
+      font-size: 3.5rem;
+    }
+
+    details {
+      width: 60%;
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #000000;
+      border-radius: 10px;
+      background-color: #7649fe;
+    }
+
+    summary {
+      font-size: 1.2em;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    details[open] {
+      background-color: #9660dc;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 10px 0;
+    }
+  }
+}

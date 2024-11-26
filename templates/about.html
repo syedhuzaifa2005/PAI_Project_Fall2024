@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Developers</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+  </head>
+  <body class="about-body">
+    <header>
+      <nav>
+        <ul>
+          <!-- <li class="button"><a href="{% url 'index' %}">Home</a></li> -->
+          <li class="button"><a href="{% url 'stats' %}">Statistics</a></li>
+          {% if user.is_authenticated %}
+          <li class="button"><a href="{% url 'logout' %}">Logout</a></li>
+          {% else %}
+          <li class="button"><a href="{% url 'login' %}">Login</a></li>
+          <li class="button"><a href="{% url 'signup' %}">Signup</a></li>
+          {% endif %}
+        </ul>
+      </nav>
+    </header>
+    <main class="about-main">
+      <h1 class="main-heading">Developers</h1>
+
+      <section class="developers">
+        <!-- Developer 1 -->
+        <div class="dev-1">
+          <div class="dev-text">
+            <h1 class="name"><span>Huzaifa</span> Ali</h1>
+            <p>23K-0004</p>
+          </div>
+          <div class="social-icons">
+            <a href="#" target="_blank" class="icons" id="instagram">
+              <img
+                src="{% static 'images/instagram-icon.png' %}"
+                alt="Instagram"
+              />
+            </a>
+            <a href="#" target="_blank" class="icons" id="linkedin">
+              <img
+                src="{% static 'images/linkedin-icon.png' %}"
+                alt="LinkedIn"
+              />
+            </a>
+            <a
+              href="https://github.com/syedhuzaifa2005"
+              target="_blank"
+              class="icons"
+              id="github"
+            >
+              <img src="{% static 'images/github-icon.png' %}" alt="Github" />
+            </a>
+          </div>
+        </div>
+
+        <!-- Developer 2 -->
+        <div class="dev-2">
+          <div class="dev-text">
+            <h1 class="name"><span>Amna</span> Asim</h1>
+            <p>23K-0859</p>
+          </div>
+          <div class="social-icons">
+            <a href="#" target="_blank" class="icons" id="instagram">
+              <img
+                src="{% static 'images/instagram-icon.png' %}"
+                alt="Instagram"
+              />
+            </a>
+            <a href="#" target="_blank" class="icons" id="linkedin">
+              <img
+                src="{% static 'images/linkedin-icon.png' %}"
+                alt="LinkedIn"
+              />
+            </a>
+            <a
+              href="https://github.com/amnaasim24"
+              target="_blank"
+              class="icons"
+              id="github"
+            >
+              <img src="{% static 'images/github-icon.png' %}" alt="Github" />
+            </a>
+          </div>
+        </div>
+
+        <!-- Developer 3 -->
+        <div class="dev-3">
+          <div class="dev-text">
+            <h1 class="name"><span>Haris</span> Ahmed</h1>
+            <p>23K-6005</p>
+          </div>
+          <div class="social-icons">
+            <a href="#" target="_blank" class="icons" id="instagram">
+              <img
+                src="{% static 'images/instagram-icon.png' %}"
+                alt="Instagram"
+              />
+            </a>
+            <a href="#" target="_blank" class="icons" id="linkedin">
+              <img
+                src="{% static 'images/linkedin-icon.png' %}"
+                alt="LinkedIn"
+              />
+            </a>
+            <a
+              href="https://github.com/HarisAhmed1234"
+              target="_blank"
+              class="icons"
+              id="github"
+            >
+              <img src="{% static 'images/github-icon.png' %}" alt="Github" />
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <span class="line"></span>
+  </body>
+</html>
